@@ -1,0 +1,76 @@
+<div box titulo="Consultar Facturas" cor="info">
+
+	<div class="row">
+		<div class="col-md-12">
+			
+			<div class="mailbox-controls">
+                <!-- Check all button -->
+                <button type="button" class="btn btn-default btn-sm checkbox-toggle"  ui-sref="wiz0"><i class="fa fa-plus"></i>
+                </button>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default btn-sm"><i class="fa fa-edit" ></i></button>
+                  <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash"></i></button>
+                  <button type="button" class="btn btn-default btn-sm"><i class="fa fa-print"></i></button>
+                </div>
+                
+              </div>
+			
+			
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4">
+			<div dxselectx titulo="Sucursal" opcoes="filiais" modelo="filial" orientacao="vertical"></div>
+		</div>
+		<div class="col-md-4">
+			<div dxselectx titulo="Departamento" opcoes="departamentos" modelo="departamento" orientacao="vertical"></div>
+		</div>
+		<div class="col-md-4">
+			<div dxselectx titulo="Entidad" opcoes="entidades" modelo="entidade" orientacao="vertical"></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4">
+			<dxinputv tipo="TEXT" id="" titulo="Comprobante" dica="Comprobante" modelo="">
+			</dxinputv>
+		</div>
+		<div class="col-md-4">
+			<dxinputv tipo="TEXT" id="" titulo="Documento" dica="Documento" modelo="documento">
+			</dxinputv>
+		</div>
+		<div class="col-md-4">
+			<dxinputv tipo="TEXT" id="" titulo="Codigo Interno" dica="codigo" modelo="codigo">
+			</dxinputv>
+		</div>
+	</div>
+
+
+
+	<div class="row">
+		<div class="col-md-3">
+			<div dxselectv titulo="Tipo Factura" opcoes="tipoFaturas" modelo="tipofatura" orientacao="vertical"></div>
+		</div>
+		<div class="col-md-3">
+			<div dxselectv titulo="Situación" opcoes="situacaoFaturas" modelo="situacaoFatura" orientacao="vertical"></div>
+		</div>
+		<div class="col-md-3">
+			<dxdate titulo="Fecha Emissión" modelo="emissao" opcoes="optSimples"></dxdate>
+		</div>
+		<div class="col-md-3">
+			<div dxbutton icon="" cor="blue" titulo="Filtrar" modelo=""></div>
+		</div>
+	</div>
+
+
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<div ui-grid="faturaOptions" ui-grid-move-columns ui-grid-pagination class="grid"></div>
+		</div>
+	</div>
+
+
+</div>

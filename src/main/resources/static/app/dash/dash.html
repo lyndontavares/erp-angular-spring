@@ -1,0 +1,209 @@
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><img src="../dist/img/c.png" height="45px"></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><!-- <img src="../dist/img/c.png" height="45px"> --> Comercial<b>Erp</b></span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+  
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+         
+  <!-- menu noty-->
+ 
+          
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a ui-sref="login"><i class="fa fa-power-off"></i></a> <!--fa-sign-out-->
+          </li>
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../dist/img/av11.png" class="img-circle" alt="User Image">
+        </div>
+       
+        <div class="pull-left info">
+          <p>{{user.nome}}</p>
+          <!-- Status -->
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          
+          <div class="btn-group">
+						<a href="#" class="btn btn-xs btn-primary btn-outlineoff dark"><i class="fa fa-envelope"></i></a>
+						<a href="#" class="btn btn-xs btn-primary btn-outlineoff dark"><i class="fa fa-user"></i></a>
+						<a data-toggle="control-sidebar" href="#" class="btn btn-xs btn-primary btn-outlineoff dark"><i class="fa fa-cog"></i></a>
+						<a ui-sref="login" href="#" class="btn btn-xs btn-danger btn-outlineoff dark"><i class="fa fa-power-off"></i></a>
+					</div>
+          
+        </div>
+      </div>
+
+      <!-- search form (Optional) -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Pesquisar...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu">
+        
+        <li class="header">MENU PRINCIPAL</li>
+        
+        <li ui-sref="dash"><a href="#"><i class="fa fa-dashboard text-aqua"></i> <span>Dashboard</span></a></li>
+  
+        <li ng-hide="!pode_pessoa" ui-sref="pessoa"><a href="#"><i class="fa fa-users text-aqua"></i> <span>Pessoas</span></a></li>
+ 
+        <li ng-hide="!pode_fatura" ui-sref="fatura"><a href="#"><i class="fa  fa-cc-mastercard text-aqua"></i> <span>Faturas</span></a></li>
+
+        <li ng-hide="!pode_pedido" ui-sref="pedido"><a href="#"><i class="fa   fa-tty text-aqua"></i> <span>Pedidos</span></a></li>   
+              
+        <li ng-hide="!pode_catalogo" ui-sref="catalogo"><a href="#"><i class="fa fa-tags text-aqua"></i> <span>Produtos</span></a></li>
+        
+        <li ng-hide="!pode_financeiro"><a href="#"><i class="fa fa-money text-aqua"></i> <span>Financeiro</span></a></li>
+        
+        <li ng-hide="!pode_usuario" ui-sref="usuario"><a href="#"><i class="fa fa-user-plus text-aqua"></i> <span>Gerenciar Usuários</span></a></li>
+        
+        <li ng-hide="!pode_configuracao" ui-sref="setup"><a href="#"><i class="fa  fa-toggle-on text-aqua"></i> <span>Gerenciar Configurações</span></a></li>
+        
+        <li class="header">MENU USUÁRIO</li>
+ 
+        <li ui-sref="profile"><a href="#"><i class="fa fa-user text-aqua"></i> <span>Profile</span></a></li>
+
+      </ul>
+      <!-- /.sidebar-menu -->
+
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+
+
+
+
+    <section class="content" ui-view=""></section>
+
+
+
+
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      LCT
+    </div>
+    <!-- Default to the left    -->
+    <strong>{{empresa.nome}}</strong> {{empresa.endereco}} <b>{{empresa.telefone}}</b> {{empresa.email}}
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <h4 class="control-sidebar-subheading">
+                    Custom Template Design
+                    <span class="label label-danger pull-right">70%</span>
+                  </h4>
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+           immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<script src="/dist/js/app.min.js"></script>

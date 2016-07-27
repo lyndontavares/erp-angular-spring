@@ -1,0 +1,48 @@
+<!--<div box titulo="Itens" cor="info">-->
+
+<div class="row">
+	<div class="col-md-6">
+		<div dxselectv titulo="Tipo Financiero" opcoes="tipoFinanceiros" modelo="tipoFinanceiro" orientacao="vertical"></div>
+	</div>
+	<div class="col-md-6">
+		<div dxselectv titulo="Cuentas a Cobrar/Pagar" opcoes="contas" modelo="conta" orientacao="vertical"></div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<dxmaskmoney titulo="Valor Moneda Cartera" modelo="valor" opcoes="opcao1"></dxmaskmoney>
+	</div>
+	<div class="col-md-6">
+		<dxmaskmoney titulo="Valor Moneda Factura" modelo="valor" opcoes="opcao1"></dxmaskmoney>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-6">
+			<dxdate titulo="Fecha Vencimiento" modelo="periodo" opcoes="optSimples"></dxdate>
+	</div>
+	<div class="col-md-4">
+		<dxmaskmoney titulo="Tasa de Interés" modelo="valor" opcoes="opcao1"></dxmaskmoney>
+	</div>
+	<div class="col-md-2">
+		<div dxbutton icon="" cor="blue" titulo="Aceptar" modelo=""></div>
+	</div>
+</div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<div ui-grid="financeiroOptions" ui-grid-move-columns ui-grid-pagination class="grid"></div>
+		</div>
+	</div>
+
+
+
+
+<div class="box-footer">
+	<button type="button" class="pull-right btn bg-green margin" ui-sref="wiz5">Guardar y siguiente <i class="fa fa-arrow-right"></i></button>
+</div>
+
+<!--</div>-->

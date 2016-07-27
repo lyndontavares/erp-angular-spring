@@ -1,0 +1,545 @@
+<div box titulo="Gerenciar Configurações" cor="info">
+
+    <uib-tabset active="activeForm">
+
+
+
+
+        <uib-tab index="0" heading="Empresa">
+            <div class="box-body">
+
+                <div class="row">
+
+                    <table class="table table-hover">
+
+
+                        <tbody>
+
+                            <tr>
+                                <th style="width: 10px">#</th>
+                                <th>Informações</th>
+
+                            </tr>
+
+                            <tr>
+                                <td>1.</td>
+                                <td>
+                                    Dados gerais
+                                    <br>
+
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <dxinputv tipo="TEXT" id="" titulo="Nome" dica="Nome da empresa" modelo="config.empresa.nome">
+                                            </dxinputv>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <dxinputv tipo="TEXT" id="" titulo="Endereço" dica="Endereço" modelo="config.empresa.endereco">
+                                            </dxinputv>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <dxinputv tipo="TEXT" id="" titulo="E-mail" dica="E-mail" modelo="config.empresa.email">
+                                            </dxinputv>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <dxinputv tipo="TEXT" id="" titulo="Telefone" dica="Telefone" modelo="config.empresa.telefone">
+                                            </dxinputv>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <dxinputv tipo="TEXT" id="" titulo="CNPJ" dica="CNPJ" modelo="config.empresa.codigoContribuinte">
+                                            </dxinputv>
+                                        </div>
+
+
+                                    </div>
+
+                                </td>
+
+
+
+                            </tr>
+
+
+                            <tr>
+                                <td>2.</td>
+                                <td>
+                                    Registro de software
+                                    <br>
+
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <dxinputv tipo="TEXT" id="" titulo="Chave de Registro" dica="XXXX-XXXX-XXXX-XXXX" modelo="config.chaveRegistroDaAplicacao">
+                                            </dxinputv>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </uib-tab>
+
+        <!--       <uib-tab index="1" heading="Filiais">
+
+            <div class="box-body">
+                <div class="row">
+                </div>
+            </div>
+
+        </uib-tab>  -->
+
+        <uib-tab index="1" heading="Financeiro">
+
+            <div class="box-body">
+
+                <div class="row">
+
+                    <table class="table table-hover">
+                        <tbody>
+
+                            <tr>
+                                <th style="width: 10px">#</th>
+                                <th>Funcionalidade</th>
+                                <th style="width: 100px">Desligado/Ligado</th>
+                            </tr>
+
+                            <tr>
+                                <td>1.</td>
+                                <td>Permitir desconto na fatura.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.permitirDescontoFatura"></switch>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2.</td>
+                                <td>Permitir venda acima do limite de crédito.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.permitirVendaAcimaLimite"></switch>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </uib-tab>
+
+
+
+        <uib-tab index="2" heading="Fatura">
+
+            <div class="box-body">
+
+                <div class="row">
+
+                    <table class="table table-hover">
+
+                        <tbody>
+
+                            <tr>
+                                <th style="width: 10px">#</th>
+                                <th>Funcionalidade</th>
+
+                            </tr>
+
+                            <tr>
+                                <td>1.</td>
+                                <td>
+                                    Faturamento
+                                    <br>
+
+                                    <div class="row">
+
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Moeda fatura</label>
+                                                <div class="select2 select2-container">
+                                                    <ol class="nya-bs-select ng-pristine ng-valid btn-group ng-touched" data-size="10" ng-model="config.moedaPrincipal" data-live-search="false"
+                                                    actions-box="true" style="width: 100%;">
+                                                        <li nya-bs-option="op in moedas"><a>{{ op }}<span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </uib-tab>
+
+
+
+        <uib-tab index="2" heading="Estoque">
+
+            <div class="box-body">
+                <div class="row">
+
+                    <table class="table table-hover">
+                        <tbody>
+
+                            <tr>
+                                <th style="width: 10px">#</th>
+                                <th>Funcionalidade</th>
+                                <th style="width: 100px">Desligado/Ligado</th>
+                            </tr>
+
+                            <tr>
+                                <td>1.</td>
+                                <td>Permitir saldo negativo.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.permitirEstoqueNegativo"></switch>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </uib-tab>
+
+
+
+        <!--      <uib-tab index="2" heading="Preços">
+
+            <div class="box-body">
+                <div class="row">
+                </div>
+            </div>
+
+        </uib-tab> -->
+
+
+
+        <uib-tab index="2" heading="Notificações">
+            <div class="box-body">
+
+                <div class="row">
+
+                    <table class="table table-hover">
+                        <tbody>
+
+
+                            <tr>
+                                <td>1.</td>
+                                <td colspan="2">
+
+                                    Configuração da conta de email
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <dxinputv tipo="TEXT" id="" titulo="Nome do Host" dica="exemplo: smtp.gmail.com" modelo="config.servidorEmail.host">
+                                            </dxinputv>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <dxinputv tipo="TEXT" id="" titulo="Porta" dica="exemplo:: 465" modelo="config.servidorEmail.porta">
+                                            </dxinputv>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <dxinputv tipo="TEXT" id="" titulo="E-mail" dica="exemplo: sales@company.com" modelo="config.servidorEmail.emailEnvio">
+                                            </dxinputv>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <dxinputv tipo="TEXT" id="" titulo="Usuário" dica="Usuário" modelo="config.servidorEmail.usuario">
+                                            </dxinputv>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <dxinputv tipo="PASSWORD" id="" titulo="Senha" dica="Senha" modelo="config.servidorEmail.senha">
+                                            </dxinputv>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr>
+                                <td>2.</td>
+                                <td colspan="2">
+
+                                    Agendar envio de e-mails
+                                    <br>
+ 
+ 
+                                    <table class="table table-hover">
+                                        <tbody>
+
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <tr>
+                                                        <td>
+                                                            <switch id="enabled"  ng-model="config.enviarEmailSegunda"></switch>
+                                                        </td>
+                                                        <td>
+                                                            <switch id="enabled"  ng-model="config.enviarEmailTerca"></switch>
+                                                        </td>
+                                                        <td>
+                                                            <switch id="enabled"  ng-model="config.enviarEmailQuarta"></switch>
+                                                        </td>
+                                                        <td>
+                                                            <switch id="enabled"   ng-model="config.enviarEmailQuinta"></switch>
+                                                        </td>
+                                                        <td>
+                                                            <switch id="enabled"  ng-model="config.enviarEmailSexta"></switch>
+                                                        </td>
+                                                        <td>
+                                                            <switch id="enabled"   ng-model="config.enviarEmailSabado"></switch>
+                                                        </td>
+                                                        <td>
+                                                            <switch id="enabled"   ng-model="config.enviarEmailDomingo"></switch>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Segunda
+                                                        </td>
+                                                        <td>
+                                                            Terça
+                                                        </td>
+                                                        <td>
+                                                            Quarta
+                                                        </td>
+                                                        <td>
+                                                            Quinta
+                                                        </td>
+                                                        <td>
+                                                            Sexta
+                                                        </td>
+                                                        <td>
+                                                            Sábado
+                                                        </td>
+                                                        <td>
+                                                            Domingo
+                                                        </td>
+
+                                                    </tr>
+
+                                        </tbody>
+                                    </table>
+
+
+
+
+                                    </div>
+                                    </div>
+
+
+
+                                    <div class="row">
+
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                Horário de envio dos e-mails:</label>
+                                                <div class="select2 select2-container">
+                                                    <ol class="nya-bs-select ng-pristine ng-valid btn-group ng-touched" data-size="10" ng-model="config.horarioEnvioEmail" data-live-search="false"
+                                                    actions-box="true" style="width: 100%;">
+                                                        <li nya-bs-option="op in horario"><a>{{ op }}<span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+                                <th style="width: 10px">#</th>
+                                <th>Funcionalidade</th>
+                                <th style="width: 100px">Desligado/Ligado</th>
+                            </tr>
+
+                            <tr>
+                                <td>3.</td>
+                                <td>Enviar e-mail quando estoque zerado.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.enviarEmailEstoqueZerado"></switch>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>4.</td>
+                                <td>Enviar e-mail quando venda para cliente sem credido.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.enviarEmailVendaClienteSemCredido"></switch>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>5.</td>
+                                <td>Enviar e-mail após adicionar pessoa.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.enviarEmailAposAdicionarPessoa"></switch>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>6.</td>
+                                <td>Enviar e-mail após adicionar fatura.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.enviarEmailAposAdicionarFatura"></switch>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>7.</td>
+                                <td>Enviar e-mail após adicionar pedido.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.enviarEmailAposAdicionarPedido"></switch>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>8.</td>
+                                <td>Enviar e-mail após deletar pessoa.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.enviarEmailAposDeletarPessoa"></switch>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>9.</td>
+                                <td>Enviar e-mail após deletar fatura.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.enviarEmailAposDeletarFatura"></switch>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>10.</td>
+                                <td>Enviar e-mail após deletar pedido.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.enviarEmailAposDeletarPedido"></switch>
+                                    <!--on="SIM" off="NAO"-->
+                                </td>
+                            </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+            </div>
+        </uib-tab>
+
+
+
+
+        <uib-tab index="2" heading="Interface">
+            <div class="box-body">
+
+                <div class="row">
+
+                    <table class="table table-hover">
+                        <tbody>
+
+                            <tr>
+                                <th style="width: 10px">#</th>
+                                <th>Funcionalidade</th>
+                                <th style="width: 100px">Desligado/Ligado</th>
+                            </tr>
+
+                            <tr>
+                                <td>1.</td>
+                                <td>Permitir fechar janela modal com tecla ESCAPE.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.permitirFecharJanelaModalComEscape"></switch>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2.</td>
+                                <td>Permitir fechar janela modal clicando fora da região da janela.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.permitirFecharJanelaModalClicandoFora"></switch>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>3.</td>
+                                <td>Permitir animação nas janelas modais.</td>
+                                <td>
+                                    <switch id="enabled" name="enabled" ng-model="config.permitirAnimacaojanelaModal"></switch>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+            </div>
+        </uib-tab>
+
+
+    </uib-tabset>
+
+
+    <div class="box-footer">
+        <button class="btn bg-green pull-right " type="button" ng-click="gravar()">Gravar configurações</button>
+    </div>
+
+
+
+</div>

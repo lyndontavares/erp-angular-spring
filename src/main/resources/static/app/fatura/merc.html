@@ -1,0 +1,117 @@
+<div box titulo="Seleccion de Mercaderia" cor="info">
+
+
+	<div class="row">
+
+		<div class="col-md-4">
+			<div dxinputv tipo="text" modelo="entidade.codigo" titulo="Codigo" dica="Codigo"></div>
+		</div>
+
+		<div class="col-md-4">
+			<div dxselectx titulo="Situación" opcoes="mercadoriasituacoes" modelo="mercadoriasituacao" orientacao="vertical"></div>
+		</div>
+
+		<div class="col-md-4">
+			<div dxinputv tipo="text" modelo="entidade.nome" titulo="Descripción" dica="Descripción"></div>
+		</div>
+
+	</div>
+	
+	<div class="row">
+
+		<div class="col-md-4">
+			<div dxselectx titulo="Embalaje" opcoes="embalajes" modelo="embalaje" orientacao="vertical"></div>
+		</div>
+		
+		<div class="col-md-4">
+			<div dxselectX titulo="Tipo" opcoes="tipoprodutos" modelo="tipoproduto" orientacao="vertical"></div>
+		</div>
+		
+		<div class="col-md-4">
+			
+			<div dxbutton icon="search" cor="blue" titulo="Buscar" modelo=""></div>
+			
+		</div>
+
+	</div>
+
+
+<!--
+  <div class="box-body no-padding">
+    <ul class="nav nav-pills nav-stacked">
+      <li ui-sref="wiz1"><a href="#"><i class="fa fa-circle-o text-red" ></i> Entrada - Compra</a></li>
+      <li><a href="#"><i class="fa fa-circle-o text-red" ></i> Entrada - Compra Interna</a></li>
+      <li><a href="#"><i class="fa fa-circle-o text-red" ></i> Entrada - Compra Pedidos</a></li>
+    </ul>
+  </div>-->
+
+	<!--table.table>tr>td{Id}*3 -->
+	<table class="table table-striped">
+		<tr>
+			<td><span>Codigo</span></td>
+			<td>Descrición</td>
+			<td>Embalaje</td>
+			<td>Cantidad</td>
+		</tr>
+		<tr ng-repeat="e in mercaderias">
+			<!--<td><i class="fa fa-circle-o text-red" >--> 
+			<td>{{e.codigo}}</td>
+			<td>{{e.descricao}}</td>
+			<td>{{e.embalaje}}</td>
+			<td>{{e.cantidad}}</td>
+		</tr>
+	</table>
+
+
+	<div class="box-footer">
+		<button class="btn bg-blue margin" type="button" ng-click="ok()">Cadastrar</button>
+		<button class="btn bg-blue pull-right margin" type="button" ng-click="ok()">Selecionar</button>
+		<button class="btn bg-default pull-right margin" type="button" ng-click="ok()">Cancelar</button>
+	</div>
+
+
+</div>
+
+<!--
+<div class="modal-header">
+	<h3 class="modal-title">Entidad</h3>
+</div>
+<div class="modal-body">
+
+<div class="row">
+	<div class="col-md-12">
+		
+		<button type="button" ng-click="" class=" btn bg-blue" style="margin: 24px 0px 24px;">Filtro 1</button>
+		<button type="button" ng-click="" class=" btn bg-blue" style="margin: 24px 0px 24px;">Filtro 2</button>
+		<button type="button" ng-click="" class=" btn bg-blue" style="margin: 24px 0px 24px;">Filtro 3</button>
+		<button type="button" ng-click="" class=" btn bg-blue" style="margin: 24px 0px 24px;">Filtro 4</button>
+		<button type="button" ng-click="" class=" btn bg-blue" style="margin: 24px 0px 24px;">Filtro 5</button>
+
+	</div>
+
+</div>
+
+	<div class="row">
+		<div class="col-md-12">
+
+			<div dxselectv titulo="Entidad" opcoes="entidades" modelo="entidade" orientacao="vertical"></div>
+
+		</div>
+	</div>
+
+
+table.table>tr>td{Id}*3 
+<table class="table">
+	<tr>
+		<td>Id</td>
+		<td>Nome</td>
+		<td>E-mail</td>
+	</tr>
+</table> 
+
+
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" type="button" ng-click="ok()">SELECIONAR</button>
+	<button class="btn btn-primary" type="button" ng-click="ok()">CANCELAR</button>
+</div>-->

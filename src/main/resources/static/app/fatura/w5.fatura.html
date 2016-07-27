@@ -1,0 +1,85 @@
+<div class="row">
+	<div class="col-md-6">
+		<dxinputv tipo="TEXT" id="id1" titulo="Entidad" dica="Entidad" modelo="entidade"></dxinputv>
+
+	</div>
+	<div class="col-md-2">
+
+		<dxinputv tipo="TEXT" id="id1" titulo="RUC" dica="RUC" modelo="ruc"></dxinputv>
+
+	</div>
+	<div class="col-md-1">
+		<dxinputv tipo="TEXT" id="id2" titulo="DV" dica="DV" modelo="dv"></dxinputv>
+
+	</div>
+
+	<div class="col-md-3">
+
+		<div dxselectv titulo="Tipo" opcoes="operacoes" modelo="operacao" orientacao="vertical"></div>
+
+	</div>
+
+</div>
+
+
+
+<div class="row">
+	<div class="col-md-6">
+		
+		<dxinputv tipo="TEXT" id="id3" titulo="Numero Doc" dica="Numero Doc" modelo="numerodoc"></dxinputv>
+		
+	</div>
+	<div class="col-md-6">
+		
+		<dxinputv tipo="TEXT" id="id4" titulo="Numero Timbrado" dica="Numero Timbrado" modelo="timbrado"></dxinputv>
+		
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-3">
+		
+		<dxmaskmoney titulo="Monto Exento" modelo="exento" opcoes="opcao1"></dxmaskmoney>
+		
+	</div>
+	<div class="col-md-3">
+		
+		<dxmaskmoney titulo="IVA 10%" modelo="IVA10" opcoes="opcao4"></dxmaskmoney>
+		
+	</div>
+
+	<div class="col-md-3">
+		<dxmaskmoney titulo="Monto 10%" modelo="monto10" opcoes="opcao4"></dxmaskmoney>
+	</div>
+	<div class="col-md-3">
+		<dxmaskmoney titulo="IVA 5%" modelo="iva5" opcoes="opcao4"></dxmaskmoney>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-3">
+		
+		<dxmaskmoney titulo="Monto 5%" modelo="" opcoes=""></dxmaskmoney>
+		
+	</div>
+	<div class="col-md-3">
+		
+		<dxmaskmoney titulo="Total IVA" modelo="" opcoes=""></dxmaskmoney>
+	</div>
+
+	<div class="col-md-3">
+		
+		<dxmaskmoney titulo="Total Gravado" modelo="" opcoes=""></dxmaskmoney>
+		
+	</div>
+	<div class="col-md-3">
+		
+		
+		
+	</div>
+</div>
+
+<div class="box-footer">
+	<button type="button" class="pull-right btn bg-green margin" ui-sref="wiz1">Salvar</button>
+		<a class="btn pull-right btn bg-green margin" href="views/fac-print.html" target="_blank"><i class="fa fa-print"></i> Imprimir</a>
+</div>

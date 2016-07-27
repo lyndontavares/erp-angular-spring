@@ -1,0 +1,44 @@
+<!--<div box titulo="Itens" cor="info">-->
+
+<div class="row">
+	<div class="col-md-6">
+		<!--<div dxselectv titulo="Mercaderia" opcoes="mercaderias" modelo="mercaderia" orientacao="vertical"></div>-->
+
+		<div class="form-group">
+			<label>Mercaderia</label>
+			<div class="input-group">
+				<input type="text" class="form-control" ng-model="entidad">
+				<span class="input-group-addon" ng-click="openMerc('lg')"> <span class="glyphicon glyphicon-search"></span>
+			</div>
+		</div>
+
+	</div>
+	<!--<div class="col-md-2">
+			<div dxselectv titulo="Embalaje" opcoes="embalajes" modelo="embalaje" orientacao="vertical"></div>
+		</div>-->
+
+	<div class="col-md-2">
+		<dxmaskmoney titulo="Cantidad" modelo="cantidad" opcoes="options5"> </dxmaskmoney>
+	</div>
+
+	<div class="col-md-2">
+		<dxmaskmoney titulo="Valor Unitario" modelo="valor" opcoes="options2"> </dxmaskmoney>
+	</div>
+
+	<div class="col-md-2">
+		<div dxbutton icon="" cor="blue" titulo="Aceptar" modelo=""></div>
+	</div>
+
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div ui-grid="gridOptions" ui-grid-move-columns ui-grid-pagination class="grid"></div>
+	</div>
+</div>
+
+<div class="box-footer">
+	<button type="button" class="pull-right btn bg-green margin" ui-sref="wiz3">Guardar y siguiente <i class="fa fa-arrow-right"></i></button>
+</div>
+
+<!--</div>-->

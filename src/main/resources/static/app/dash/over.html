@@ -1,0 +1,94 @@
+<div box titulo="Dashboard" cor="info">
+    <div class="box-body">
+
+        <!--
+        <div class="row">
+            <div class="col-md-6">
+                <div infobox titulo="Total de Clientes" valor="{{totalClientes}}" progresso="100" descricao="" cor="blue" icon="fa-comment-o"></div>
+            </div>
+            <div class="col-md-6">
+                <div infobox titulo="Total Vendas no Mês" valor="10" progresso="100" descricao="" cor="blue" icon="fa-comment-o"></div>
+            </div>
+        </div> -->
+
+
+
+        <div class="row">
+
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-yellow"><i class="fa fa-users"></i></span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">Total de clientes</span>
+                        <span class="info-box-number">{{totalClientes}}</span>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-red"><i class="fa  fa-cc-mastercard"></i></span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">Total de vendas no mês</span>
+                        <span class="info-box-number">US$ 10.000.00</span>
+                         <span class="info-box-number">G$ 15.000.00.000</span>
+                         
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+</div>
+
+
+<div class="box box-default">
+    <div class="box-header with-border">
+        <h3 class="box-title">Gráficos</h3>
+
+ 
+        <div class="row">
+            <div class="col-lg-6 col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Pessoa por Categoria</div>
+                    <div class="panel-body">
+                        <div ng-controller="GraficoPessoaCategoriaController">
+                            <canvas id="doughnut" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-legend="true">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="col-lg-6 col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Pessoa Física/Juridica</div>
+                    <div class="panel-body">
+                        <div ng-controller="GraficoPessoaFisicaController">
+                            <canvas id="doughnut" class="chart chart-pie" chart-data="data" chart-labels="labels" chart-legend="true">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,119 @@
+<div box titulo="Profile" cor="info">
+
+    <uib-tabset active="activeForm">
+
+
+        <uib-tab index="0" heading="Conta do Usuário">
+            <div class="box-body">
+
+                <div class="row">
+
+                    <table class="table">
+
+
+                        <tbody>
+
+                            <tr>
+                                <td>Dados gerais</td>
+
+                                <td>
+
+
+
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <dxinputv tipo="TEXT" id="" titulo="Nome" dica="Nome" modelo="user.nome">
+                                            </dxinputv>
+                                        </div>
+
+
+                                        <div class="col-md-2">
+                                            <dxinputv tipo="TEXT" id="" titulo="Id" dica="Id" modelo="user.id">
+                                            </dxinputv>
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            <dxinputv tipo="PASSWORD" id="" titulo="Senha" dica="" modelo="user.senha">
+                                            </dxinputv>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </td>
+
+
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td> Foto</td>
+
+                                <td>
+
+
+
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+
+
+                                            <img id="img{{user.id}}" alt="Foto" ng-src="{{foto}}" ng-click="selectPhoto(user.id)" class="img-thumbnail" width="120" />
+
+
+                                            <input type="file" id="file{{user.id}}" onchange="angular.element(this).scope().uploadPhoto(this.id)" accept="image/*" style="display: none;"
+                                            />
+
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </uib-tab>
+
+        <uib-tab index="1" heading="Permissões">
+
+            <div class="box-body">
+                <div class="row">
+
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Lista de Permissões</td>
+                            </tr>
+                            <tr ng-repeat="p in permissao">
+                                <td>{{p}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </uib-tab>
+
+    </uib-tabset>
+
+
+    <div class="box-footer">
+        <button class="btn bg-green pull-right " type="button" ng-click="gravar()">Gravar Alterações</button>
+    </div>
+
+
+
+</div>

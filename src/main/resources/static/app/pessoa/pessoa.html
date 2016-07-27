@@ -1,0 +1,67 @@
+<div box titulo="Pessoas" cor="info">
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="mailbox-controls">
+                <!-- Check all button -->
+                <button type="button" ng-disabled="!pode_add" class="btn btn-default btn-sm checkbox-toggle" ng-click="crud('add','')"><i class="fa fa-plus"></i> Adicionar
+                </button>
+                <button type="button"  class="btn btn-default btn-sm checkbox-toggle" ng-click="repo()"><i class="fa fa-plus"></i> Adicionar
+                </button>
+               <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm"> <a href="app/fatura/fac-print.html" target="_blank"><i class="fa fa-print"></i> Imprimir</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    
+    <div class="row">
+        <div class="col-md-2">
+            <dxinputv tipo="TEXT" id="" titulo="Nome" dica="Nome" modelo="filtro.nome">
+            </dxinputv>
+        </div>
+
+        <div class="col-md-2">
+            <dxinputv tipo="TEXT" id="" titulo="Documento" dica="Documento" modelo="filtro.documento">
+            </dxinputv>
+        </div>
+
+        <div class="col-md-2">
+            <div dxselectv titulo="Tipo" opcoes="listaRole" modelo="filtro.role" orientacao="vertical"></div>
+        </div>
+
+        <div class="col-md-2">
+            <div dxselectv titulo="Fisica/Juridica" opcoes="listaTipo" modelo="filtro.tipo" orientacao="vertical"></div>
+        </div>
+
+
+        <div class="col-md-2">
+            <div dxselectv titulo="Situação" opcoes="listaSituacao" modelo="filtro.situacao" orientacao="vertical"></div>
+        </div>
+
+        <div class="col-md-1">
+            <div class="form-group">
+                <button type="button" ng-click="filtrar()" class="form-control btn bg-blue" style="margin: 24px 0px 24px;"><i class="fa"></i> Filtrar</button>
+            </div>
+        </div>
+
+        <div class="col-md-1">
+            <div class="form-group">
+                <button type="button" ng-click="limparFiltro()" class="form-control btn bg-blue" style="margin: 24px 0px 24px;"><i class="fa"></i> Limpar</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div ui-grid="gridOptions" ui-grid-move-columns ui-grid-pagination ui-grid-auto-resize class="grid"></div>
+        </div>
+    </div>
+
+
+
+</div>

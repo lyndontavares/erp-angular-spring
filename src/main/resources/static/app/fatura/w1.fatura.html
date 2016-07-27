@@ -1,0 +1,49 @@
+<!--<div box titulo="Dados Iniciais" cor="default">-->
+
+<div class="row">
+
+	<div class="col-md-6">
+
+		<dxdate titulo="Fecha" modelo="periodo" opcoes="optSimples"></dxdate>
+
+		<div dxselectv titulo="Moneda" opcoes="moedas" modelo="moeda" orientacao="vertical"></div>
+
+		<div dxselectv titulo="Condición" opcoes="condicoes" modelo="condicao" orientacao="vertical"></div>
+
+		<dxmaskmoney titulo="Moneda 1" modelo="valor1" opcoes="options3"></dxmaskmoney>
+
+		<dxdate titulo="Fecha Despacho" modelo="periodo" opcoes="optSimples"></dxdate>
+
+	</div>
+
+	<div class="col-md-6">
+
+		<div dxselectv titulo="Plan" opcoes="planos" modelo="plano" orientacao="vertical"></div>
+
+		<div dxselectv titulo="Proceso" opcoes="processos" modelo="processo" orientacao="vertical"></div>
+
+		<!--<div dxselectv titulo="Entidad" opcoes="entidades" modelo="entidade" orientacao="vertical"></div>-->
+
+		<div class="form-group">
+			<label>Entidad</label>
+			<div class="input-group">
+				<input type="text" class="form-control" ng-model="entidad">
+				<span class="input-group-addon" ng-click="open('lg')" > <span class="glyphicon glyphicon-search"></span>
+			</div>
+		</div>
+
+
+		<dxmaskmoney titulo="Moneda 2" modelo="valor2" opcoes="options2"> </dxmaskmoney>
+
+		<div dxselectv titulo="Tipo IVA" opcoes="modalidades" modelo="modalidade" orientacao="vertical"></div>
+
+	</div>
+</div>
+
+<div class="box-footer">
+	<button type="button" class="pull-right btn bg-green margin" ui-sref="wiz2">Guardar y siguiente <i class="fa fa-arrow-right"></i></button>
+</div>
+
+
+
+<!--</div>-->

@@ -1,0 +1,98 @@
+<div class="row">
+	<div class="col-lg-6 col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">Livros - pizza</div>
+			<div class="panel-body">
+				<div ng-controller="GraficoDoughnutController">
+					<canvas id="doughnut" class="chart chart-pie"
+					chart-data="data" chart-labels="labels" chart-legend="true">
+					</canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-6 col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">Livros - doughnut</div>
+			<div class="panel-body">
+				<div ng-controller="GraficoDoughnutController">
+					<canvas id="doughnut" class="chart chart-doughnut"
+					chart-data="data" chart-labels="labels" chart-legend="true">
+					</canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-6 col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">Livros - polar-area</div>
+			<div class="panel-body">
+				<div ng-controller="GraficoDoughnutController">
+					<canvas id="doughnut" class="chart chart-polar-area"
+					chart-data="data" chart-labels="labels" chart-legend="true">
+					</canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-6 col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">Livros - area</div>
+			<div class="panel-body">
+				<div ng-controller="graficoController">
+					<canvas id="line" class="chart chart-line" chart-data="data"
+					chart-labels="labels" chart-legend="true" chart-series="series"
+					chart-click="onClick" >
+					</canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-lg-12 col-sm-12">
+	<div class="panel panel-default">
+		<div class="panel-heading">Lógica no Server Side</div>
+		<div class="panel-body">
+			<pre>
+				@RequestMapping("/graficoLivroQuantidade")
+				public GraficoJson graficoValorEstoque(){
+					List<String> labels = new ArrayList<>();
+					List<String> series = new ArrayList<>();
+					List<BigDecimal> data = new ArrayList<>();
+					
+					GraficoJson dadosJson = new GraficoJson();
+					labels.add("2015");
+
+					List<Object[]> dadosObj = em.createNativeQuery
+					   ("select l.id, l.titulo, sum( l.exemplares ) from tab_livro l group by l.id,l.titulo")
+					   .getResultList();
+					
+					for (Object[] d : dadosObj) {
+						series.add( (String) "(" + d[0] + ") "+d[1]+ " Qtde: " + d[2] );
+					data.add((BigDecimal) d[2]);
+					}
+					
+					dadosJson.setLabels(labels);
+					dadosJson.setSeries(series);
+					dadosJson.setData(data);
+				return  dadosJson;
+				}
+			</pre>
+
+<blockquote>
+  <p></p>
+  <footer>É simples, porém complexo. <cite title="Source Title">L.T.</cite></footer>
+</blockquote>
+
+
+
+		</div>
+	</div>
+</div>
+</div>
+</div>

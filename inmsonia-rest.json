@@ -1,0 +1,339 @@
+{
+  "_type": "export",
+  "__export_format": 1,
+  "__export_date": "2016-03-27T03:07:45.323Z",
+  "__export_source": "insomnia.chrome.app:v2.6.10",
+  "items": [
+    {
+      "_type": "request_group",
+      "_id": "grp_1458391819633",
+      "name": "Comercial API",
+      "environments": {},
+      "requests": [
+        {
+          "_type": "request",
+          "_id": "req_1458938332739",
+          "url": "http://localhost:8080/autenticarToken",
+          "method": "POST",
+          "body": "{\"login\":\"a1\", \"senha\":\"123\"}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Login"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1458940687063",
+          "url": "http://localhost:8080/permissao/search/findByUsuarioId",
+          "method": "GET",
+          "body": "{\"login\":\"u-1\", \"senha\":\"123\"}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Login - listar permissoes"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1458391819633",
+          "url": "http://localhost:8080/api/pessoa",
+          "method": "POST",
+          "body": "{\"id\":0, \"nome\":\"lyndonXXX\", \"telefone\":\"999-999\", \"sexo\":\"MASCULINO\",\"situacao\":\"ATIVA\"}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Adicionar pessoa"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1459002741133",
+          "url": "http://localhost:8080/api/pessoa",
+          "method": "POST",
+          "body": "{\n    \"id\":0, \n    \"nome\":\"banco11\", \n    \"telefone\":\"999-999\", \n    \"sexo\":\"MASCULINO\",\n    \"situacao\":\"ATIVA\", \n    \"roles\": [ \n        {\"pessoaRole\":\"BANCO\"},\n        {\"pessoaRole\":\"FORNECEDOR\"}]\n    \n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Incluir pessoa com roles"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1459016441059",
+          "url": "http://localhost:8080/api/pessoa",
+          "method": "POST",
+          "body": "{\n    \"id\":1, \n    \"nome\":\"banco-1\", \n    \"telefone\":\"999-999\", \n    \"sexo\":\"MASCULINO\",\n    \"situacao\":\"ATIVA\",\n    \"tipoPessoa\": \"FISICA\",\n    \"credito\": \"SIM\",\n    \"limite\": 0,\n    \"roles\": [ {\n        \n        \"pessoaRole\":\"BANCO\"} \n    ]\n    \n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "update pessoa com roles"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1459017215849",
+          "url": "http://localhost:8080/api/pessoa/filtro",
+          "method": "POST",
+          "body": "{\n\"filtros\" :\n[\n    { \"parametro\":\"id\",\"valor\":1,\n    \"operador\":\"igual\"  }  \n    \n     \n]\n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Consultar pessoa com role - id"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1459016923306",
+          "url": "http://localhost:8080/api/pessoa/filtro",
+          "method": "POST",
+          "body": "{\n\"filtros\" :\n[\n    { \"parametro\":\"roles.pessoaRole\",\"valor\":\"BANCO\",\n    \"operador\":\"innerJoin\", \"join\":\"roles\" }  \n    \n     \n]\n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Consultar pessoa com role"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1458792975536",
+          "url": "http://localhost:8080/api/pessoa/1",
+          "method": "DELETE",
+          "body": "1",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Deletar pessoa "
+        },
+        {
+          "_type": "request",
+          "_id": "req_1458610059858",
+          "url": "http://localhost:8080/api/pessoa",
+          "method": "GET",
+          "body": "{\"id\":0, \"nome\":\"lyndonXXX\", \"telefone\":\"999-999\", \"sexo\":\"MASCULINO\",\"situacao\":\"ATIVA\"}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Consultar pessoa  "
+        },
+        {
+          "_type": "request",
+          "_id": "req_1458850381015",
+          "url": "http://localhost:8080/pessoa",
+          "method": "GET",
+          "body": "{\"id\":0, \"nome\":\"lyndonXXX\", \"telefone\":\"999-999\", \"sexo\":\"MASCULINO\",\"situacao\":\"ATIVA\"}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Consultar pessoa - repo"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1458778934183",
+          "url": "http://localhost:8080/api/pessoa/filtro",
+          "method": "POST",
+          "body": "{\n\"filtros\" :\n[{ \"parametro\":\"id\",\"valor\":3,\"operador\":\"menor\" }]\n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Consultar pessoa com filtro - codigo"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1458759027647",
+          "url": "http://localhost:8080/api/pessoa/filtro",
+          "method": "POST",
+          "body": "{\n\"filtros\" :\n[{ \"parametro\":\"nome\",\"valor\":\"pessoa-1\",\"operador\":\"igual\" }]\n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Consultar pessoa com filtro - nome"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1458779143174",
+          "url": "http://localhost:8080/api/pessoa/filtro",
+          "method": "POST",
+          "body": "{\n\"filtros\" :\n[\n    { \"parametro\":\"id\",\"valor\":1,\"operador\":\"igual\" },\n    { \"parametro\":\"nome\",\"valor\":\"p%\",\"operador\":\"like\" },\n    { \"parametro\":\"situacao\",\"valor\":\"ATIVA\",\"operador\":\"igual\" },\n    { \"parametro\":\"cidade\",\"valor\":1,\"operador\":\"igual\" }\n]\n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Consultar pessoa com filtro - vários"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1458829610553",
+          "url": "http://localhost:8080/api/pessoa/filtro",
+          "method": "POST",
+          "body": "{\n\"filtros\" :\n[\n    { \"parametro\":\"id\",\"valor\":1,\"operador\":\"igual\" },\n    { \"parametro\":\"nome\",\"valor\":\"pessoa-1\",\"operador\":\"igual\" } \n]\n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Consultar pessoa com filtro - vários2"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1458963802284",
+          "url": "http://localhost:8080/api/pessoa/filtro",
+          "method": "POST",
+          "body": "{\n\"filtros\" :\n[\n    { \"parametro\":\"roles.pessoaRole\",\"valor\":\"CLIENTE\",\n    \"operador\":\"innerJoin\", \"join\":\"roles\" }  \n]\n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Consultar pessoa com filtro - vários3"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1458783255110",
+          "url": "http://localhost:8080/api/funcionalidade/filtro",
+          "method": "POST",
+          "body": "{\n\"filtros\" :\n[\n    { \"parametro\":\"id\",\"valor\":11,\"operador\":\"igual\" } \n     \n]\n}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Consultar funcionalidae com filtro - vários "
+        },
+        {
+          "_type": "request",
+          "_id": "req_1458791994605",
+          "url": "http://localhost:8080/api/funcionalidade",
+          "method": "GET",
+          "body": "{\"id\":0, \"nome\":\"lyndonXXX\", \"telefone\":\"999-999\", \"sexo\":\"MASCULINO\",\"situacao\":\"ATIVA\"}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Consultar funcionalidade"
+        }
+      ]
+    }
+  ]
+}

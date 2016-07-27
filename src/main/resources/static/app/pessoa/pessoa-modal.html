@@ -1,0 +1,253 @@
+<div box titulo="{{viewModoEdicao()}} Pessoa" cor="info">
+
+
+    <uib-tabset active="activeForm">
+        <uib-tab index="0" heading="Dados">
+            <ng-form name="nestedForm">
+
+
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <dxinputv tipo="TEXT" id="" titulo="Nome" dica="Nome" modelo="pessoa.nome" readonly="">
+                        </dxinputv>
+                    </div>
+
+                    <div class="col-md-2">
+                        <dxinputv tipo="TEXT" id="" titulo="Código" dica="Automático" modelo="pessoa.id" readonly="true">
+                        </dxinputv>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div dxselectv titulo="Fisica/Juridica" opcoes="tipoPessoa" modelo="pessoa.tipoPessoa" orientacao="vertical"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-md-8">
+                        <dxinputv tipo="TEXT" id="" titulo="Nome Fantasia" dica="Nome Fantasia" modelo="pessoa.nomeFantasia">
+                        </dxinputv>
+                    </div>
+
+                    <!--       <div class="col-md-4">
+            <div class="form-group">
+                <b>Tipo</b>
+                <ol class="nya-bs-select" data-size="8" ng-model="pessoa.roles" 
+                actions-box="true" multiple style="width: 100%">
+                    <li nya-bs-option="option in tipoRole">
+                       <a>{{ option.pessoaRole }}<span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                 </ol>
+            </div>
+        </div>  -->
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Tipo</label>
+                            <div class="select2 select2-container">
+                                <ol class="nya-bs-select ng-pristine ng-valid btn-group ng-touched" data-size="10" ng-model="pessoa.roles" data-live-search="false"
+                                actions-box="true" multiple style="width: 100%;">
+                                    <li nya-bs-option="op in tipoRole"><a>{{ op.pessoaRole }}<span class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <dxinputv tipo="TEXT" id="" titulo="Telefone" dica="Telefone" modelo="pessoa.telefone">
+                        </dxinputv>
+                    </div>
+
+                    <div class="col-md-4">
+                        <dxinputv tipo="TEXT" id="" titulo="Celular" dica="Celular" modelo="pessoa.celular">
+                        </dxinputv>
+                    </div>
+
+
+
+                    <div class="col-md-4">
+                        <div dxselectv titulo="Situação" opcoes="tipoSituacao" modelo="pessoa.situacao" orientacao="vertical"></div>
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="row">
+
+
+                    <div class="col-md-4">
+                        <dxinputv tipo="TEXT" id="" titulo="Endereco" dica="Endereco" modelo="pessoa.endereco">
+                        </dxinputv>
+                    </div>
+
+                    <div class="col-md-4">
+                        <dxinputv tipo="TEXT" id="" titulo="E-mail" dica="E-mail" modelo="pessoa.email">
+                        </dxinputv>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div dxselectv titulo="Sexo" opcoes="tipoSexo" modelo="pessoa.sexo" orientacao="vertical"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+
+                    <div class="col-md-4">
+                        <dxinputv tipo="TEXT" id="" titulo="Documento" dica="Documento" modelo="pessoa.documento">
+                        </dxinputv>
+                    </div>
+
+
+
+                    <div class="col-md-4">
+                        <dxinputv tipo="TEXT" id="" titulo="Cadastro" dica="Automático" modelo="pessoa.cadastro" readonly="true">
+                        </dxinputv>
+                    </div>
+
+                    <!--       
+        <div class="col-md-4">
+            <dxdate tipo="TEXT" id="" titulo="Nascimento" dica="Nascimento" modelo="pessoa.nascimento" readonly="true">
+            </dxdate>
+        </div> -->
+
+                </div>
+
+
+            </ng-form>
+        </uib-tab>
+        <uib-tab index="1" heading="Crédito">
+            <ng-form name="nestedForm">
+
+                <div class="row">
+
+
+                    <div class="col-md-4">
+                        <div dxselectv titulo="Credito" opcoes="tipoSimNao" modelo="pessoa.credito" orientacao="vertical"></div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <dxinputv tipo="NUMBER" id="" titulo="Limite" dica="Limite" modelo="pessoa.limite">
+                        </dxinputv>
+                    </div>
+
+
+                </div>
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </ng-form>
+        </uib-tab>
+
+        <uib-tab index="2" heading="Contatos">
+            <ng-form name="nestedForm">
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <table>
+                          
+                            <tr  ng-repeat="c in pessoa.contatos">
+                                <td>
+                                    <b>{{c.nome}}</b>
+                                    <br> Telefone: {{c.telefone}}
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </ng-form>
+        </uib-tab>
+
+
+        <uib-tab index="2" heading="Adicionais">
+            <ng-form name="nestedForm">
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="form-group">
+                            <label>Observaçoes</label>
+                            <textarea class="form-control" rows="5" ng-model="pessoa.observacao" placeholder=""></textarea>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </ng-form>
+        </uib-tab>
+
+
+
+
+    </uib-tabset>
+
+
+
+    <!--{{pessoa|json}}-->
+
+
+    <div class="box-footer">
+        <button class="btn bg-green pull-right " type="button" ng-click="ok()">Confirmar</button>
+        &nbsp;
+        <button class="btn bg-default pull-right " ng-hide="modoEdicao=='con'" type="button" ng-click="cancel()">Cancelar</button>
+    </div>
+
+
+</div>

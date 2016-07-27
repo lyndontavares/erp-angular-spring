@@ -1,0 +1,19 @@
+package com.comercial.model.notify.enums;
+
+public enum Evento
+{
+
+   APOS_ADICIONAR_PESSOA,
+   APOS_EDITAR_PESSOA,
+   APOS_DELETAR_PESSOA,
+    
+   APOS_ADICIONAR_FATURA,
+   APOS_EDITAR_FATURA,
+   APOS_DELETAR_FATURA,
+   
+   APOS_ADICIONAR_PEDIDO,
+   APOS_EDITAR_PEDIDO,
+   APOS_DELETAR_PEDIDO;
+    
+ 
+}

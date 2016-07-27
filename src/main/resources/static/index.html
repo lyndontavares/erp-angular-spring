@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html ng-app='app'>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Comercial</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
+    <!-- Ionicons -->
+    <!--<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">-->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/dist/css/AdminLTE.css">
+    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect.
+    -->
+    <link rel="stylesheet" href="/dist/css/skins/skin-blue.min.css">
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/vendor/angular-loading-bar/loading-bar.css">
+    <link rel="stylesheet" href="/vendor/leaflet-js/leaflet.css">
+    <!--<link rel="stylesheet" href="/vendor/ng-notify/ng-notify.css">-->
+    <link rel="stylesheet" href="/vendor/snap-js/snap.css">
+    <link rel="stylesheet" href="/vendor/others/nya-bs-select.css">
+    <link rel="stylesheet" href="/vendor/others/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="/vendor/others/ui-grid.css" />
+    <link rel="stylesheet" href="/vendor/others/grid.css" />
+    <link rel="stylesheet" href="/vendor/others/bwizard.css" />
+    <link rel="stylesheet" href="/vendor/others/toastr.css" />
+    <link rel="stylesheet" href="/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="/app/css/animate1.css">
+    <link rel="stylesheet" href="/vendor/others/bootstrap-nav-wizard.css" />
+    <link rel="stylesheet" href="/vendor/others/angular-ui-switch.min.css" />
+    <link rel="stylesheet" href="/vendor/others/angular-chart.css" />
+    
+    <link rel="stylesheet" href="/vendor/others/angular-notification-icons.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<!--
+  BODY TAG OPTIONS:
+  =================
+  Apply one or more of the following classes to get the
+  desired effect
+  |---------------------------------------------------------|
+  | SKINS         | skin-blue                               |
+  |               | skin-black                              |
+  |               | skin-purple                             |
+  |               | skin-yellow                             |
+  |               | skin-red                                |
+  |               | skin-green                              |
+  |---------------------------------------------------------|
+  |LAYOUT OPTIONS | fixed                                   |
+  |               | layout-boxed                            |
+  |               | layout-top-nav                          |
+  |               | sidebar-collapse                        |
+  |               | sidebar-mini                            |
+  |---------------------------------------------------------|
+  -->
+
+<body class="hold-transition skin-blue  sidebar-mini">
+
+    <div class="ui-view"></div>
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <!--<script src="/dist/js/app.min.js"></script> //carregado no DASH.html -->
+
+    <!-- Optionally, you can add Slimscroll and FastClick plugins.
+         Both of these plugins are recommended to enhance the
+         user experience. Slimscroll is required when using the
+         fixed layout. -->
+
+    <script src="/vendor/angular-js/angular.js"></script>
+    <script src="/vendor/angular-js/angular-animate.js"></script>
+    <script src="/vendor/angular-js/angular-sanitize.js"></script>
+    <script src="/vendor/fastclick/fastclick.js"></script>
+    <script src="/vendor/ui-router/angular-ui-router.js"></script>
+    <script src="/vendor/others/nya-bs-select.js"></script>
+    <script src="/vendor/others/moment.js"></script>
+    <script src="/vendor/others/daterangepicker.js"></script>
+    <script src="/vendor/others/angular-daterangepicker.js"></script>
+    <script src="/vendor/others/jquery.maskMoney.js"></script>
+    <script src="/vendor/others/angular.maskMoney.js" charset="utf-8"></script>
+    <script src="/vendor/others/ui-grid.js"></script>
+    
+    <!-- <script src="/vendor/three-js/three.js"></script>
+  <script src="/vendor/three-js/TrackballControls.js"></script>
+  <script src="/vendor/touchpolyfill/touchpolyfill.js"></script> -->
+  
+    <script src="/vendor/others/ui-bootstrap-tpls-0.14.3.min.js"></script>
+    <script src="/vendor/others/toastr.js"></script>
+    <script src="/vendor/others/toastr.tpl.js"></script>
+    <script src="/vendor/others/ngStorage.min.js"></script>
+    <script src="/vendor/others/underscore-min.js"></script>
+    
+    <script src="/vendor/others/angular-notification-icons.min"></script> 
+
+    <script src="/plugins/iCheck/icheck.min.js"></script>
+    <script src="/vendor/others/angular-ui-switch.min.js"></script>
+
+    <script src="vendor/others/chart.min.js"></script>
+    <script src="vendor/others/angular-chart.js"></script>
+    
+    <script src="vendor/others/require.js"></script> 
+    <script src="vendor/others/fluentReports.js"></script>
+    <script src="vendor/others/PDFKitImportPDF.js"></script>
+     <script src="/app/pessoa/reportDisplayer.js"></script>
+    
+
+    <script src="/app/app.js"></script>
+    <script src="/app/config/const.js"></script>
+    <script src="/app/config/rota.js"></script>
+    <script src="/app/config/init.js"></script>
+    <script src="/app/config/security.js"></script>
+    <script src="/app/diretivas/diretiva.js"></script>
+
+    <script src="/app/login/login.js"></script>
+    <script src="/app/login/login-service.js"></script>
+
+    <script src="/app/dash/dash.js"></script>
+    <script src="/app/dash/over.js"></script>
+
+    <script src="/app/pessoa/pessoa.js"></script>
+    <script src="/app/pessoa/pessoa-service.js"></script>
+    <script src="/app/pessoa/pessoa-modal.js"></script>
+    <script src="/app/pessoa/tipo-pessoa-service.js"></script>
+    <script src="/app/pessoa/tipo-sexo-service.js"></script>
+
+    <script src="/app/usuario/usuario.js"></script>
+
+    <script src="/app/produto/catalogo.js"></script>
+
+    <script src="/app/pedido/pedido.js"></script>
+
+    <script src="/app/fatura/fatura.js"></script>
+
+    <script src="/app/setup/setup.js"></script>
+    <script src="/app/setup/Setup-service.js"></script>
+
+    <script src="/app/financeiro/financeiro.js"></script>
+
+    <script src="/app/profile/profile.js"></script>
+    <script src="/app/profile/fileupload-service.js"></script>
+    
+    <script src="/app/grafico/grafico-pessoa.js"></script>
+    <script src="/app/grafico/grafico-pessoa-fisica.js"></script>
+    
+    <script src="/app/notificacao/notificacao.js"></script>
+    
+</body>
+
+</html>
